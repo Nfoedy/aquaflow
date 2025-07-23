@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> <!-- Codifica dei caratteri UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">   <!-- meta viewport, serve per rendere il template per essere responsive, pronto per il mobile -->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"> <!-- serve per rendere il nostro template compatibile per Internet Explorer -->
+  <title>Water Works</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet"> <!-- Font Rubik di Google -->
+  <link rel="stylesheet" href="style.css">  <!-- File dello style CSS -->
+
+</head>
+
+
+<body>
+
+  
+
+  <div class="container">
+
+    <header class="header">
+
+      <a href="index.html"><img src="Logo_Water_Works_Rit.jpg" alt="Water Works Logo" class="logo"></a>
+
+      <!-- Tag di navigazione-->
+      <nav class="menu"> 
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="service.html">Services</a></li> 
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+
+      <a href="contact.html" class="button">Contact</a>
+
+
+      <div class="hamburger">
+        <span></span> <!-- Span tag html --> 
+        <span></span>
+      </div>
+  
+    </header>
+
+    
+    <div class="grid text-center">
+      <div class="col-100">
+        <h1>About</h1>
+        <p>Questa è la sezione di about, ricordarsi di aggiornarla.</p>
+        <a href="" class="button">Discover More</a>
+      </div>
+    </div>
+
+
+    <div class="grid reverse">
+      <div class="col-50">
+        <img src="Img/Immagine2.jpg" alt="" class="img-res">
+      </div>
+      <div class="col-50">
+        <img src="Img/Immagine3.jpg" alt="" class="pb-2 pt-1">
+        <h2>Lorem lorem lorem lorem siam amet labor...</h2>
+        <p>Lorem lore stiam dcaew heirs</p>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="grid text-center">
+      <div class="col-33">
+        <h3 class="color-1"> 15000 </h3>
+        <p>Clienti soddisfatti</p>
+      </div>
+      <div class="col-33">
+        <h3 class="color-2"> 25000 </h3>
+        <p>Lavori eseguiti</p>
+      </div>
+      <div class="col-33">
+        <h3 class="color-3"> 1000 </h3>
+      </div>
+    </div>
+
+
+
+
+    <div class="grid">
+      <div class="col-33">
+        <a href="service.html" class="card">
+          <img src="Img/Immagine9.jpg" alt="" class="img-res">
+          <div class="card__text">
+            Testo Testo
+          </div>
+        </a>
+      
+      </div>
+      <div class="col-33">
+        <a href="service.html" class="card">
+          <img src="Img/Immagine10.jpg" alt="" class="img-res">
+          <div class="card__text">
+            Testo Testo
+          </div>
+        </a>
+      </div>
+      <div class="col-33">
+        <a href="service.html" class="card">
+          <img src="Img/Immagine11.jpg" alt="" class="img-res">
+          <div class="card__text">
+            Testo Testo
+          </div>
+        </a>
+      </div>
+    </div>
+
+
+    
+
+
+    <footer class="footer">
+      <div class="grid">
+        <div class="col-25">
+          <img src="Logo_Water_Works_Rit.jpg" alt="Water Works Logo" class="logo">
+        <p>Copyright © 2024 Water Works SRL. </p>
+        </div>
+        <div class="col-25">
+          <h4 style="font-size: 1.5rem;">Contatti</h4>
+          <ul>
+            <li>Tel: +39 XXX XXX XXXX</li>
+            <li>
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=email@gmail.com">emailwaterworks@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-25">
+          <h4 style="font-size: 1.5rem;">Sede Operativa</h4>
+          <ul>
+            <li>
+              <a href="https://maps.app.goo.gl/SxwXxMjMCeo6F1x1A" target="_blank">Loc. Piani di Lanciano 11/12 - 62022 Castelraimondo (MC)</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-25" >
+          <h4 style="font-size: 1.5rem;">Orari apertura</h4>
+          <ul>
+            <li>Lunedì - Venerdì: 8:00 - 18:30</li>
+            <li>Sabato - Domenica: Chiuso</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+
+
+   
+    <script>  
+
+    let hamburger = document.querySelector('.hamburger');
+
+    hamburger.addEventListener("click", function(){
+      document.body.classList.toggle('open'); 
+      }
+      ); 
+
+
+    </script>
+
+
+  </div>
+</body>
+</html>
