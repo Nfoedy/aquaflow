@@ -17,48 +17,6 @@ p{font-size: 18px; line-height: 1.4;}
 
 
 
-#preloader {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: white;
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .loader-content {
-    text-align: center;
-  }
-  
-  .logo {
-    width: 150px;
-    margin-bottom: 20px;
-  }
-  
-  .progress-bar {
-    width: 200px;
-    height: 10px;
-    background: #eee;
-    border-radius: 5px;
-    overflow: hidden;
-    margin: 0 auto;
-  }
-  
-  .progress {
-    width: 0%;
-    height: 100%;
-    background: #3498db;
-    animation: load 2s ease-out forwards;
-  }
-  
-  @keyframes load {
-    to {
-      width: 100%;
-    }
-  }
-
 
 /*BUTTON*/
 
@@ -71,7 +29,7 @@ p{font-size: 18px; line-height: 1.4;}
 }
 
 
-.button.hover{
+.button:hover{
     background: #22C58A;
 }
 
@@ -88,11 +46,18 @@ p{font-size: 18px; line-height: 1.4;}
 /*rende i margini tra il logo ed il menu automatico, commentandolo rimane centrato*/
 /*.logo{margin-right: auto;}*/
 
+.logo {
+  width: 150px;         /* puoi cambiare la dimensione */
+  height: auto;         /* mantiene le proporzioni */
+  max-width: 100%;      /* evita che vada oltre il contenitore */
+  display: block;
+}
+
 /*MENU*/
 
 .menu ul{padding: 0; margin: 0;}
 .menu li{display: inline-block;}
-.menu a{padding: 15px 20px; display: block; color:#666666; font-weight: bold; font-size: 25px;}
+.menu a{padding: 15px 20px; display: block; color:#0c76ce; font-weight: bold; font-size: 25px;}
 
 .hamburger{display: none;} /*invisibile da Web*/
 
@@ -156,14 +121,19 @@ p{font-size: 18px; line-height: 1.4;}
 /*COVER*/
 
 .cover{
-    border: 1px solid #0c76ce;
-    height: 60vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url(Img/ImmagineContattaci.jpg) no-repeat center center; /*Per mettere l'immagine di sfondo alla cover*/
-    background-size: cover;
+  border: 1px solid #0c76ce;
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+  position: relative;
+  color: white;
+  text-align: center;
+  padding: 2rem;
 }
 
 
@@ -174,16 +144,37 @@ p{font-size: 18px; line-height: 1.4;}
     color: #fff;
 }
 
+.cover--contact{
+  background-image: url('Img/ImageContact.png');
+}
+
+.cover--about{
+  background-image: url('Img/ImageTeam.png');
+}
+
 
 /*CARD*/
 .card{
     display: block;
     /*border: 1px solid red;*/
-    width: 100%; position: relative;
+    width: 100%; 
+    position: relative;
 }
 
 .card__text{
-    position: absolute; bottom: 20px; left: 20px; background: #0c76ce; padding: 15px; color: #fff;
+    position: absolute; 
+    bottom: 20px; 
+    left: 20px; 
+    background: #0c76ce; 
+    padding: 15px; 
+    color: #fff;
+    border-radius: 8px;
+}
+
+.card__text:hover {
+  background: #22c58a; /* Cambia colore */
+  transform: scale(1.05); /* Leggero ingrandimento */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Ombra */
 }
 
 
@@ -200,7 +191,24 @@ p{font-size: 18px; line-height: 1.4;}
 /*UTILITIES*/
 /*Classi che posso riutilizzare*/
 
-.img-res{height: auto; width: 100%;} /* per aggiungere il bordo blu: border: 5px solid #0c76ce;*/
+.img-res{
+  height: auto; 
+  width: 100%;
+  border: 2px solid rgba(12, 118, 206, 0.3); /* bordo blu chiaro */
+  border-radius: 12px;                        /* angoli curvi */
+  transition: all 0.3s ease;                  /* animazione fluida */
+  box-sizing: border-box;
+} 
+
+.img-res:hover {
+  border-color: #0c76ce; /* bordo blu pieno */
+  box-shadow: 0 0 12px rgba(12, 118, 206, 0.25); /* alone soft */
+  transform: scale(1.02);
+}
+  
+
+
+
 
 .text-center{text-align: center;}
 
@@ -255,3 +263,50 @@ p{font-size: 18px; line-height: 1.4;}
 
 
 
+
+
+
+/*BARRA DI CARICAMENTO*/
+
+#preloader {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loader-content {
+  text-align: center;
+}
+
+.preloader-logo {
+  width: 120px;
+  margin-bottom: 30px;
+}
+
+.progress-bar {
+  width: 200px;
+  height: 10px;
+  background: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress {
+  width: 0%;
+  height: 100%;
+  background: #0c76ce;
+  animation: load 2s forwards;
+  border-radius: 5px;
+}
+
+@keyframes load {
+  100% {
+    width: 100%;
+  }
+}

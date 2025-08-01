@@ -10,28 +10,26 @@
   <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
   <!-- <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet"> Font Rubik di Google --> 
   <link rel="stylesheet" href="style.css">  <!-- File dello style CSS -->
-
 </head>
 
 
 <body>
 
- <!-- Barra di caricamento-->
- <!--  <div id="preloader">
+  <!-- Barra di caricamento-->
+  <div id="preloader">
     <div class="loader-content">
-      <img src="AquaFlow_Logo.png" alt="Logo" class="logo">
+      <img src="Img/AquaFlow_Logo.png" alt="Logo AquaFlow" class="preloader-logo">
       <div class="progress-bar">
         <div class="progress"></div>
       </div>
     </div>
   </div>
-  -->
 
-  <div class="container">
+  <main class="container">
 
     <header class="header">
 
-      <a href="index.html"><img src="AquaFlow_Logo.png" alt="Aqua Flow logo" class="logo"></a>
+      <a href="index.html"><img src="Img/AquaFlow_Logo.png" alt="Logo AquaFlow" class="logo"></a>
 
 
       <!-- Tag di navigazione-->
@@ -70,11 +68,11 @@
           Offriamo un servizio completo, su misura per le esigenze di ogni cliente, 
           nel pieno rispetto delle normative vigenti.
         </p>
-        <a href="Discover more" class="button">Scopri chi siamo</a>
+        <a href="about.html" class="button">Scopri chi siamo</a>
       </div>
 
       <div class="hero__img">
-        <img src="Img/Immagine1.jpg" alt="" class="img-res">
+        <img src="Img/Image_1.png" alt="" class="img-res">
       </div>
 
     </div>
@@ -83,10 +81,10 @@
 
     <div class="grid reverse">
       <div class="col-50">
-        <img src="Img/Immagine2.jpg" alt="" class="img-res">
+        <img src="Img/Image_5.png" alt="" class="img-res">
       </div>
       <div class="col-50">
-        <img src="Img/Immagine3.jpg" alt="" class="pb-2 pt-1 img-res">
+        <img src="Img/Image_2.png" alt="" class="img-res">
         <h2 style="color: #0c76ce;">Esperti nel settore</h2>
         <p>Il nostro team è composto da professionisti qualificati che seguono ogni fase del lavoro: dalla
           consulenza iniziale alla consegna chiavi in mano, assicurando 
@@ -95,23 +93,23 @@
     </div>
 
 
-    <div class="cover">
+    <div class="cover cover--contact">
       <div class="cover__text">
         <h2>Contattaci</h2>
         <p>Hai bisogno di maggiori informazioni sui nostri servizi antincendio? 
           Vuoi richiedere un preventivo personalizzato o fissare un sopralluogo? 
           Il team di Aqua Flow SRL è a tua completa disposizione.</p>
-        <a href="Discover more" class="button">Fallo ora!</a>
+        <a href="contact.html" class="button">Fallo ora!</a>
       </div>
     </div>
 
 
-    <div class="grid">
+    <div class="grid reverse">
       <div class="col-50">
-        <img src="Img/Immagine6.jpg" alt="" class="img-res">
+        <img src="Img/Image_8.png" alt="" class="img-res">
       </div>
       <div class="col-50">
-        <img src="Img/Immagine7.jpg" alt="" class="pb-2 pt-3 img-res">
+      <!-- <img src="Img/Image_7.png" alt="" class="pb-2 pt-3 img-res"> -->
         <h2 style="color: #0c76ce;">Aziende Collaboratrici</h2>
         <p>Nel corso degli anni abbiamo costruito solide collaborazioni 
           con aziende che condividono la nostra visione di qualità, 
@@ -124,7 +122,7 @@
           Questo approccio ha generato relazioni durature, 
           fondate sulla fiducia e sulla soddisfazione reciproca.
         </p>
-          <a href="Discover more" class="button">Scopri i nostri Servizi</a>
+          <a href="service.html" class="button">Scopri i nostri Servizi</a>
       </div>
     </div>
 
@@ -150,43 +148,37 @@
     <div class="grid">
       <div class="col-33">
         <a href="service.html" class="card">
-          <img src="Img/Immagine9.jpg" alt="" class="img-res">
+          <img src="Img/Image_10.png" alt="Progettazione" class="img-res">
           <div class="card__text">
-            Testo Testo
-          </div>
-        </a>
-      
-      </div>
-      <div class="col-33">
-        <a href="service.html" class="card">
-          <img src="Img/Immagine10.jpg" alt="" class="img-res">
-          <div class="card__text">
-            Testo Testo
+            Progettazione
           </div>
         </a>
       </div>
       <div class="col-33">
         <a href="service.html" class="card">
-          <img src="Img/Immagine11.jpg" alt="" class="img-res">
+          <img src="Img/Image_9.png" alt="" class="img-res">
           <div class="card__text">
-            Testo Testo
+            Manutenzione
+          </div>
+        </a>
+      </div>
+      <div class="col-33">
+        <a href="service.html" class="card">
+          <img src="Img/Image_8.png" alt="" class="img-res">
+          <div class="card__text">
+            Consulenza
           </div>
         </a>
       </div>
     </div>
 
 
-    <div class="grid text-center">
-      <div class="col-100">
-        <h2></h2>
-      </div>
-    </div>
 
 
     <footer class="footer">
       <div class="grid">
         <div class="col-25">
-          <img src="AquaFlow_Logo.png" alt="Aqua Flow Logo" class="logo">
+          <img src="Img/AquaFlow_Logo.png" alt="Logo AquaFlow" class="logo">
         <p>Copyright © 2024 Aqua Flow SRL. </p>
         </div>
         <div class="col-25">
@@ -228,15 +220,7 @@
       }
       ); 
 
-
-    window.addEventListener("load", function() {
-    setTimeout(() => {
-      document.getElementById("preloader").style.display = "none";
-      document.getElementById("main-content").style.display = "block";
-      }, 2000); // Tempo per far terminare l'animazione
-      });
-
-
+   
     //Script per animazione dei numeri
     const counters = document.querySelectorAll('.counter');
     const duration = 10000; // durata totale in millisecondi (10 secondi)
@@ -264,9 +248,27 @@
       requestAnimationFrame(updateCount);
     });
 
+    //Script per mandare la barra di caricamento una sola volta
+    document.addEventListener("DOMContentLoaded", function () {
+        const preloader = document.getElementById("preloader");
+        const hasSeenPreloader = localStorage.getItem("aquaFlowPreloaderShown");
+
+        if (!hasSeenPreloader) {
+          preloader.style.display = "flex";
+
+          setTimeout(() => {
+            preloader.style.display = "none";
+            localStorage.setItem("aquaFlowPreloaderShown", "true");
+          }, 2500); // durata dell'animazione
+        } else {
+          preloader.style.display = "none";
+        }
+      });
+
+
     </script>
 
 
-  </div>
+  </main>
 </body>
 </html>
