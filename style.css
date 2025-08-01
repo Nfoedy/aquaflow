@@ -87,8 +87,6 @@ p{font-size: 18px; line-height: 1.4;}
 
 
 
-
-
 /*HERO*/  
 
 .hero{display: flex; padding: 5% 10%;}
@@ -212,9 +210,9 @@ p{font-size: 18px; line-height: 1.4;}
 
 .text-center{text-align: center;}
 
-.color-1{color: #FF235D;}
-.color-2{color: #22C58A;}
-.color-3{color: #0c76ce;}
+.color-red{color: #FF235D;}
+.color-green{color: #22C58A;}
+.color-blue{color: #0c76ce;}
 
 .border-blue{
   border: 1px solid #0c76ce;
@@ -310,3 +308,86 @@ p{font-size: 18px; line-height: 1.4;}
     width: 100%;
   }
 }
+
+
+
+/*MAPS*/
+
+.maps {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f5f5f5;
+}
+
+.maps h2 {
+  font-size: 2rem;
+  color: #0c76ce;
+  margin-bottom: 20px;
+}
+
+.maps__contenitore {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+
+
+/*MODULO CONTATTO*/
+
+.contattaci {
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 30px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.contact-form .button {
+  background-color: #0c76ce;
+  color: #fff;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form .button:hover {
+  background-color: #22C58A;
+}
+
+.contact-info {
+  margin-top: 40px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.contact-info a {
+  color: #0c76ce;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+
+

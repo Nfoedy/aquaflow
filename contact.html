@@ -41,100 +41,43 @@
   
     </header>
 
-    
-    <div class="grid text-center">
-      <div class="col-100">
-        <h1>Contattaci</h2>
-        <a href="" class="button">Discover More</a>
-      </div>
-    </div>
 
 
-
-
-    <div class="grid reverse">
-      <div class="col-50">
-        <img src="Img/Immagine2.jpg" alt="" class="img-res">
-      </div>
-      <div class="col-50">
-        <img src="Img/Immagine3.jpg" alt="" class="pb-2 pt-1">
-        <h1>Contattaci</h1>
-        <p>Lorem lore stiam dcaew heirs</p>
-        <ul>
-          <li>Email: dsadsada</li>
-          <li>Telefono: ipoiopioipo</li>
-        </ul>
-      </div>
-    </div>
-
-
-    <div class="cover">
+    <div class="cover cover--contact">
       <div class="cover__text">
         <h2>Contattaci</h2>
-        <p>Hai bisogno di maggiori informazioni sui nostri servizi antincendio? 
-          Vuoi richiedere un preventivo personalizzato o fissare un sopralluogo? 
-          Il team di Aqua Flow SRL è a tua completa disposizione.</p>
-        <a href="Discover more" class="button">Contattaci</a>
-      </div>
-    </div>
-
-
-    <div class="grid">
-      <div class="col-50">
-        <img src="Img/Immagine6.jpg" alt="" class="img-res">
-      </div>
-      <div class="col-50">
-        <img src="Img/Immagine7.jpg" alt="" class="pb-2 pt-3">
-        <h2>Lorem lorem lorem lorem siam amet labor...</h2>
-        <p>Lorem lore stiam dcaew heirs</p>
-      </div>
-    </div>
-
-
-    <div class="grid text-center">
-      <div class="col-33">
-        <h3 class="color-1"> 15000 </h3>
-        <p>Clienti soddisfatti</p>
-      </div>
-      <div class="col-33">
-        <h3 class="color-2"> 25000 </h3>
-        <p>Lavori eseguiti</p>
-      </div>
-      <div class="col-33">
-        <h3 class="color-3"> 1000 </h3>
+        <p>Hai bisogno di un preventivo, un sopralluogo o maggiori informazioni? 
+          Compila il modulo e ti risponderemo al più presto.</p>
       </div>
     </div>
 
 
 
+    <section class="contattaci">
+      <!-- Modulo -->
+      <h1>Compila il modulo</h1>
+      <form class="contact-form" id="contactForm">
+        <input type="text" name="name" placeholder="Nome e Cognome" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="tel" name="phone" placeholder="Telefono (facoltativo)">
+        <input type="text" name="subject" placeholder="Oggetto" required>
+        <textarea name="message" placeholder="Messaggio" rows="6" required></textarea>
+        <button type="submit" class="button">Invia Messaggio</button>
+      </form>
 
-    <div class="grid">
-      <div class="col-33">
-        <a href="service.html" class="card">
-          <img src="Img/Immagine9.jpg" alt="" class="img-res">
-          <div class="card__text">
-            Testo Testo
-          </div>
-        </a>
-      
+      <!-- Messaggio di conferma -->
+      <div id="conferma" style="display: none; margin-top: 20px; color: #22C58A;; font-weight: bold;">
+        Email inviata! I nostri dipendenti provvederanno a contattarla il prima possibile.
       </div>
-      <div class="col-33">
-        <a href="service.html" class="card">
-          <img src="Img/Immagine10.jpg" alt="" class="img-res">
-          <div class="card__text">
-            Testo Testo
-          </div>
-        </a>
+
+      <!-- Contatti diretti -->
+      <div class="contact-info">
+        <h2>Oppure contattaci direttamente</h2>
+        <p><strong>Email:</strong> <a href="email">emailaquaflow@gmail.com</a></p>
+        <p><strong>Telefono:</strong> <a href="tel">+39 XXX XXX XXXX</a></p>
       </div>
-      <div class="col-33">
-        <a href="service.html" class="card">
-          <img src="Img/Immagine11.jpg" alt="" class="img-res">
-          <div class="card__text">
-            Testo Testo
-          </div>
-        </a>
-      </div>
-    </div>
+    </section>
+    
 
 
     
@@ -159,7 +102,7 @@
           <h4 style="font-size: 1.5rem;">Sede Operativa</h4>
           <ul>
             <li>
-              <a href="https://maps.app.goo.gl/gJRNNJ6Cx31JWzWh7" target="_blank">Loc. Piazzale 11 - 62022 Castelraimondo (MC)</a>
+              <a href="https://maps.app.goo.gl/Rqr4RfY6EavhGPqh8" target="_blank">Loc. Piazzale 11 - 62022 Castelraimondo (MC)</a>
             </li>
           </ul>
         </div>
@@ -184,6 +127,22 @@
       document.body.classList.toggle('open'); 
       }
       ); 
+
+
+
+
+
+    const form = document.getElementById("contactForm");
+      const conferma = document.getElementById("conferma");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault(); // evita l'invio reale (solo per simulazione)
+        
+        conferma.style.display = "block";
+
+        // resetta i campi (opzionale)
+        form.reset();
+      });
 
 
     </script>
