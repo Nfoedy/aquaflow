@@ -16,8 +16,6 @@
 
 <body>
 
-  
-
   <div class="container">
 
     <header class="header">
@@ -27,18 +25,18 @@
       <!-- Tag di navigazione-->
       <nav class="menu"> 
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="service.html">Servizi</a></li> 
-          <li><a href="about.html">Chi Siamo</a></li>
+          <li><a href="indexen.html">Home</a></li>
+          <li><a href="serviceen.html">Services</a></li> 
+          <li><a href="abouten.html">About Us</a></li>
         </ul>
       </nav>
 
 
       <div class="lang-switcher">
-        <a href="about.html" aria-label="Italiano">
+        <a href="index.html" aria-label="Italiano">
           <img src="Img/it.jpg" alt="Italiano" class="flag-icon">
         </a>
-        <a href="en/abouten.html" aria-label="English">
+        <a href="en/index.html" aria-label="English">
           <img src="Img/en.jpg" alt="English" class="flag-icon">
         </a>
       </div>
@@ -53,50 +51,43 @@
   
     </header>
 
-    
 
-    <div class="cover cover--about">
+
+    <div class="cover cover--contact">
       <div class="cover__text">
-        <h2>Il nostro Team</h2>
-      </div>
-    </div>
-
-
-    <div class="grid reverse">
-      <div class="col-50">
-        <img src="Img/Image_5.png" alt="" class="img-res">
-      </div>
-      <div class="col-50">
-        <img src="Img/Image_2.png" alt="" class="img-res">
-        <h2 style="color: #0c76ce;">Chi siamo</h2>
-        <p>AquaFlow SRL è un’azienda specializzata nella protezione antincendio, 
-          con una lunga esperienza maturata in progetti su scala industriale, civile e pubblica. La nostra missione?
-          Garantire sicurezza, affidabilità e innovazione in ogni intervento.</p>
-          <a href="service.html" class="button">Scopri i nostri Servizi</a>
+        <h2>Contattaci</h2>
+        <p>Hai bisogno di un preventivo, un sopralluogo o maggiori informazioni? 
+          Compila il modulo e ti risponderemo al più presto.</p>
       </div>
     </div>
 
 
 
+    <section class="contattaci">
+      <!-- Modulo -->
+      <h1>Compila il modulo</h1>
+      <form class="contact-form" id="contactForm">
+        <input type="text" name="name" placeholder="Nome e Cognome" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="tel" name="phone" placeholder="Telefono (facoltativo)">
+        <input type="text" name="subject" placeholder="Oggetto" required>
+        <textarea name="message" placeholder="Messaggio" rows="6" required></textarea>
+        <button type="submit" class="button">Invia Messaggio</button>
+      </form>
 
+      <!-- Messaggio di conferma -->
+      <div id="conferma" style="display: none; margin-top: 20px; color: #22C58A;; font-weight: bold;">
+        Email inviata! I nostri dipendenti provvederanno a contattarla il prima possibile.
+      </div>
 
-    <section class="maps">
-      <h2 style="color: #0c76ce;">Dove ci troviamo</h2>
-      <div class="maps__contenitore">
-        <iframe 
-          src="https://maps.app.goo.gl/Rqr4RfY6EavhGPqh8"
-          width="100%" 
-          height="450" 
-          style="border:0;" 
-          allowfullscreen="" 
-          loading="lazy" 
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+      <!-- Contatti diretti -->
+      <div class="contact-info">
+        <h2>Oppure contattaci direttamente</h2>
+        <p><strong>Email:</strong> <a href="email">emailaquaflow@gmail.com</a></p>
+        <p><strong>Telefono:</strong> <a href="tel">+39 XXX XXX XXXX</a></p>
       </div>
     </section>
-   
-
-
+    
 
 
     
@@ -146,6 +137,22 @@
       document.body.classList.toggle('open'); 
       }
       ); 
+
+
+
+
+
+    const form = document.getElementById("contactForm");
+      const conferma = document.getElementById("conferma");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault(); // evita l'invio reale (solo per simulazione)
+        
+        conferma.style.display = "block";
+
+        // resetta i campi (opzionale)
+        form.reset();
+      });
 
 
     </script>
