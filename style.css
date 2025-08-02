@@ -390,4 +390,22 @@ p{font-size: 18px; line-height: 1.4;}
 }
 
 
+/*CAMBIO LINGUA*/
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-right: 0.25rem;
+}
 
+.flag-icon {
+  width: 24px;
+  height: auto;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.flag-icon:hover {
+  transform: scale(1.1);
+}
