@@ -33,6 +33,21 @@
         </ul>
       </nav>
 
+      <!-- Menu Mobile-->
+      <nav class="mobile-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="service.html">Servizi</a></li>
+          <li><a href="about.html">Chi Siamo</a></li>
+        </ul>
+      </nav>
+
+      <div class="hamburger">
+        <span></span> <!-- Span tag html --> 
+        <span></span>
+        <span></span>
+      </div>
+
 
       <div class="lang-switcher">
         <a href="about.html" aria-label="Italiano">
@@ -44,12 +59,6 @@
       </div>
 
       <a href="contact.html" class="button">Contattaci</a>
-
-
-      <div class="hamburger">
-        <span></span> <!-- Span tag html --> 
-        <span></span>
-      </div>
   
     </header>
 
@@ -140,12 +149,11 @@
    
     <script>  
 
-    let hamburger = document.querySelector('.hamburger');
-
-    hamburger.addEventListener("click", function(){
-      document.body.classList.toggle('open'); 
-      }
-      ); 
+      //Menu Mobile
+      let hamburger = document.querySelector('.hamburger');
+      hamburger.addEventListener("click", function () {
+        document.body.classList.toggle('open');
+      });
 
 
     </script>

@@ -72,16 +72,15 @@ p{font-size: 18px; line-height: 1.4;}
   
   .hamburger{display: block; height: 25px; width: 30px; position: absolute; top: 40px; right: 15px;}
 
-  .hamburger span{
+  .hamburger span {
     display: block;
-    top: 8px;
-    position: absolute;
-    width: 30px;
-    background-color: #b41d1d;
+    height: 3px;
+    width: 25px;
+    background-color: #0c76ce;
+    margin: 4px auto;
+    transition: 0.3s ease;
+    border-radius: 2px;
   }
-
-  .hamburger span:nth-child(1){margin-top: 6px;}
-  .hamburger span:nth-child(2){margin-top: -6px;}
 
 }
 
@@ -408,4 +407,54 @@ p{font-size: 18px; line-height: 1.4;}
 
 .flag-icon:hover {
   transform: scale(1.1);
+}
+
+
+
+/*MENU MOBILE*/
+/* Menu mobile - nascosto di default */
+.mobile-nav {
+  display: none;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background: #0c76ce; /* 💙 Sfondo blu AquaFlow */
+  border: none;
+  padding: 1rem;
+  border-radius: 10px;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-nav li {
+  margin-bottom: 10px;
+}
+
+.mobile-nav a {
+  text-decoration: none;
+  color: #ffffff; /* 🤍 Testo bianco */
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Mostra il menu solo quando il body ha classe .open */
+body.open .mobile-nav {
+  display: block;
+}
+
+/* Mostra hamburger solo su mobile */
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: none !important;
+  }
 }

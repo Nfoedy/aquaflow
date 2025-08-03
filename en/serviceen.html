@@ -31,6 +31,22 @@
         </ul>
       </nav>
 
+
+      <!-- Menu Mobile-->
+      <nav class="mobile-nav">
+        <ul>
+          <li><a href="indexen.html">Home</a></li>
+          <li><a href="serviceen.html">Services</a></li>
+          <li><a href="abouten.html">About Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="hamburger">
+        <span></span> <!-- Span tag html --> 
+        <span></span>
+        <span></span>
+      </div>
+
       <div class="lang-switcher">
         <a href="../service.html" aria-label="Italiano">
           <img src="../Img/it.jpg" alt="Italiano" class="flag-icon">
@@ -44,11 +60,7 @@
       <a href="contacten.html" class="button">Contact Us</a>
 
 
-      <div class="hamburger">
-        <span></span> <!-- Span tag html --> 
-        <span></span>
-      </div>
-  
+
     </header>
 
 
@@ -144,12 +156,12 @@
    
     <script>  
 
-    let hamburger = document.querySelector('.hamburger');
+      //Menu Mobile
+      let hamburger = document.querySelector('.hamburger');
 
-    hamburger.addEventListener("click", function(){
-      document.body.classList.toggle('open'); 
-      }
-      ); 
+      hamburger.addEventListener("click", function () {
+        document.body.classList.toggle('open');
+      });
 
 
     </script>

@@ -32,6 +32,22 @@
       </nav>
 
 
+      <!-- Menu Mobile-->
+      <nav class="mobile-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="service.html">Servizi</a></li>
+          <li><a href="about.html">Chi Siamo</a></li>
+        </ul>
+      </nav>
+
+      <div class="hamburger">
+        <span></span> <!-- Span tag html --> 
+        <span></span>
+        <span></span>
+      </div>
+
+
       <div class="lang-switcher">
         <a href="contact.html" aria-label="Italiano">
           <img src="Img/it.jpg" alt="Italiano" class="flag-icon">
@@ -44,10 +60,7 @@
       <a href="contact.html" class="button">Contattaci</a>
 
 
-      <div class="hamburger">
-        <span></span> <!-- Span tag html --> 
-        <span></span>
-      </div>
+
   
     </header>
 
@@ -131,28 +144,28 @@
    
     <script>  
 
-    let hamburger = document.querySelector('.hamburger');
+      //Menu Mobile
+      let hamburger = document.querySelector('.hamburger');
 
-    hamburger.addEventListener("click", function(){
-      document.body.classList.toggle('open'); 
-      }
-      ); 
-
-
-
-
-
-    const form = document.getElementById("contactForm");
-      const conferma = document.getElementById("conferma");
-
-      form.addEventListener("submit", function (e) {
-        e.preventDefault(); // evita l'invio reale (solo per simulazione)
-        
-        conferma.style.display = "block";
-
-        // resetta i campi (opzionale)
-        form.reset();
+      hamburger.addEventListener("click", function () {
+        document.body.classList.toggle('open');
       });
+
+
+
+
+
+      const form = document.getElementById("contactForm");
+        const conferma = document.getElementById("conferma");
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault(); // evita l'invio reale (solo per simulazione)
+          
+          conferma.style.display = "block";
+
+          // resetta i campi (opzionale)
+          form.reset();
+        });
 
 
     </script>
