@@ -21,3 +21,22 @@ AquaFlow è un sito web responsive per un'azienda immaginaria del settore idrico
 ---
 
 
+## 🌐 Anteprima del Sito
+
+### 🏠 Homepage
+![Homepage](screenshots/homepage.png)
+
+### 📱 Menu Mobile
+![Mobile Menu](screenshots/mobile-menu.png)
+
+### 🧯 Servizi
+![Servizi](screenshots/services.png)
+
+### ✉️ Contattaci
+![Contattaci](screenshots/contact.png)
+
+
+---
+
+
+
